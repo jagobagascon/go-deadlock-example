@@ -7,6 +7,7 @@ Both applications start a BLE scan operation, and wait indefinitely. Windows wil
 
 The only difference is that one of them uses `malloc` to allocate memory into the heap, and thus, uses CGO. And the other one uses `HeapAlloc` via syscall, so it does not need CGO.
 
+> [!NOTE]
 > `example-malloc` is pointing to the latest release of https://github.com/saltosystems/winrt-go, which uses `malloc` for allocation of delegates.
 > `example-heapalloc` is pointing to this PR https://github.com/saltosystems/winrt-go/pull/60, which replaces it for the `HeapAlloc` function.
 
